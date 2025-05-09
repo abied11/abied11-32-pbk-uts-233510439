@@ -45,3 +45,20 @@
   padding: 0;
   margin-bottom: 20px;
 }
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.todo-item.done .todo-text {
+  text-decoration: line-through;
+  color: #ddd;
+}
+.todo-text {
+  margin-left: 10px;
+}
