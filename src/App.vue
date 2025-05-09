@@ -12,5 +12,22 @@
       />
       <button class="add-btn" type="submit">🏅 Tambah</button>
     </form>
+        <!-- Daftar Kegiatan -->
+    <div v-if="todos.length === 0" class="empty-msg">Belum ada rencana olahraga hari ini 💤</div>
+    <ul class="list">
+      <li
+        v-for="(todo, index) in filteredTodos"
+        :key="index"
+        class="todo-item"
+        :class="{ done: todo.done }"
+      >
+        <label>
+          <input type="checkbox" v-model="todo.done" />
+          <span class="todo-text">{{ todo.text }}</span>
+        </label>
+        <button class="delete-btn" @click="deleteTodo(index)">❌</button>
+      </li>
+    </ul>
+
     </div>
   </template>
