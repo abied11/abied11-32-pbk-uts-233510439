@@ -29,3 +29,19 @@
   border: none;
   border-radius: 8px;
 }
+.add-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background-color: #2e7d32;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
