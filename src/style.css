@@ -69,3 +69,15 @@
   color: #fff;
   cursor: pointer;
 }
+.filter-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+.filter-btn:hover {
+  background-color: #fb8c00;
+}
