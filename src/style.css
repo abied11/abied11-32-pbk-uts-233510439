@@ -11,3 +11,21 @@
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
