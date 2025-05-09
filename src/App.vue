@@ -12,7 +12,8 @@
       />
       <button class="add-btn" type="submit">🏅 Tambah</button>
     </form>
-        <!-- Daftar Kegiatan -->
+
+    <!-- Daftar Kegiatan -->
     <div v-if="todos.length === 0" class="empty-msg">Belum ada rencana olahraga hari ini 💤</div>
     <ul class="list">
       <li
@@ -29,5 +30,36 @@
       </li>
     </ul>
 
-    </div>
-  </template>
+    <!-- Tombol Filter -->
+    <button class="filter-btn" @click="toggleFilter">
+      {{ filter ? 'Tampilkan Semua Kegiatan' : 'Hanya Yang Belum Selesai' }}
+    </button>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue'
+
+const todos = ref([])
+const text = ref('')
+const filter = ref(false)
+
+function submitTodo() {
+  if (text.value.trim()) {
+    todos.value.push({ text: text.value.trim(), done: false })
+    text.value = ''
+  }
+}
+
+function deleteTodo(index) {
+  todos.value.splice(index, 1)
+}
+
+function toggleFilter() {
+  filter.value = !filter.value
+}
+
+const filteredTodos = computed(() =>
+  filter.value ? todos.value.filter(todo => !todo.done) : todos.value
+)
+</script>
